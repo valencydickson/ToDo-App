@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Benne", serif;
+  color: black !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  margin: auto;
+  padding: 0.5em 1.5em;
+  background-color: rgb(218, 214, 214);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+}
+
+header h1 a {
+  display: flex;
+  color: black;
+}
+
+.logo {
+  width: 15%;
+}
+
+.toggler {
+  cursor: pointer;
+  padding: 1em;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em 1em;
+  width: 80%;
+  height: 100vh;
+  background: white;
+  transition: all 0.3s linear;
+  transform: translate(-100%);
+  z-index: 99;
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+.about-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  color: red;
+  font-size: 1.4rem;
+}
+
+.sidebar p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  list-style-type: none;
+  margin-top: 2em;
+}
+
+.social-icons li {
+  margin-right: 1em;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  color: #0755a8;
+}
+
+.social-icons i:hover {
+  color: #007bff;
+}
+
+/* MAIN */
+
+main {
+  background-color: rgb(228, 225, 225);
+  height: 88vh;
+}
+
+main h2 {
+  padding: 1em 1em 0;
+  font-weight: 400;
+}
+
+.todo {
+  margin: 1em;
+  padding: 0.5em 1em 0.5em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.checkbox {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.5em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid rgb(97, 96, 96);
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: gray;
+}
+
+.todo p {
+  font-size: 1.2rem;
+  margin-top: 0.2em;
+  font-weight: 500;
+}
+
+.delete-icon {
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add Todo */
+
+.add-todo {
+  margin-top: 1em;
+}
+
+.todo-form {
+  margin: 1em;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.show-form {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.todo-form input {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.2em;
+}
+
+.todo-form button {
+  text-transform: uppercase;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 0.5em;
+}
+
+.add-icon {
+  font-size: 1.3rem;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  left: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* For Large screens */
+
+header,
+main {
+  max-width: 600px;
+  margin: auto;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    background-color: rgb(240, 238, 238);
+  }
+  .sidebar {
+    width: 80%;
+    max-width: 525px;
+  }
+}
