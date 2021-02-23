@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "../images/todo.svg";
 
 export default function Header() {
   const [sidebarClass, setSidebarClass] = useState("");
