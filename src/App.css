@@ -26,12 +26,8 @@ header {
 }
 
 header h1 a {
-  display: flex;
+  font-size: 2rem;
   color: black;
-}
-
-.logo {
-  width: 15%;
 }
 
 .toggler {
@@ -59,6 +55,7 @@ header h1 a {
 .about-heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .close-icon {
@@ -69,7 +66,7 @@ header h1 a {
 .sidebar p {
   font-size: 1.1rem;
   font-weight: 500;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .social-icons {
@@ -98,9 +95,10 @@ main {
   height: 88vh;
 }
 
-main h2 {
+.todos-heading {
   padding: 1em 1em 0;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 1.3rem;
 }
 
 .todo {
@@ -152,7 +150,6 @@ main h2 {
 .todo-form input {
   width: 100%;
   padding: 0.7em;
-  /* margin-bottom: 0.2em; */
   font-size: 1.1rem;
 }
 
@@ -176,7 +173,7 @@ main h2 {
   border-radius: 50%;
   cursor: pointer;
   position: relative;
-  left: 85%;
+  left: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -195,5 +192,9 @@ main {
   .sidebar {
     width: 80%;
     max-width: 525px;
+  }
+
+  .add-icon {
+    left: 85%;
   }
 }

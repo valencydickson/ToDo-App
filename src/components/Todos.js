@@ -25,7 +25,7 @@ export default function Todos({ todos, deleteTodo, markComplete }) {
   });
   return (
     <div>
-      <h2>{todosHeader()}</h2>
+      <p class="todos-heading">{todosHeader()}</p>
       {todosList}
     </div>
   );

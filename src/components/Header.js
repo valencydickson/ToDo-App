@@ -14,10 +14,7 @@ export default function Header() {
   return (
     <header>
       <h1>
-        <a href="./">
-          <img src={Logo} alt="logo" className="logo" />
-          To-Do
-        </a>
+        <a href="./">To-Do</a>
       </h1>
 
       <i className="fas fa-ellipsis-v toggler" onClick={togglerClick}></i>
