@@ -11,6 +11,7 @@ export default function AddTodo({ onAddTodo }) {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
+
     if (todoValue !== "") {
       onAddTodo({
         id: faker.random.uuid(),
@@ -24,9 +25,20 @@ export default function AddTodo({ onAddTodo }) {
     }
   };
 
+  //prevent "Enter" key to submit a form
+  const onEnterKeyPress = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div className="add-todo">
-      <form className={`todo-form ${formClass}`} onSubmit={onFormSubmit}>
+      <form
+        className={`todo-form ${formClass}`}
+        onSubmit={onFormSubmit}
+        onKeyPress={onEnterKeyPress}
+      >
         <input
           type="text"
           placeholder="Add todo"
